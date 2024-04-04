@@ -5,8 +5,53 @@
     <title>Architect Walter Gropius</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Walter Gropius was an architect who founded the Bauhaus, a revolutionary design school in Germany from 1919&ndash;1932.">
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	
     <style>
-        * {outline:1px solid red;}
+        /* box-sizing */
+		html {
+			box-sizing:border-box;
+		}
+		*, *:before, *:after {
+			box-sizing:inherit;
+		}
+		
+		/* STRUCTURE */
+		body {background-color:#555;}
+		#wrap {background-color:#ddd; width:100%; max-width:800px; margin:0 auto 0 auto;}
+		header {background-color:#444; color:white;}
+		footer {background-color:#444; color:white;}
+		header, section, footer {padding:20px 60px;}
+		figure {margin:0;}
+		
+		/* TYPOGRAPHY */
+		body {font-family:arial, helvetica, sans-serif;}
+		h1 {font-size:36px;}
+		figcaption {font-style:italic; font-size:14px;}
+		ul {padding-left:16px;}
+		li  {margin-bottom:8px;}
+		
+		/* NAV TYPE */
+		nav ul {padding-left:0;}
+		nav li {list-style:none; display:inline-block; margin-right:6px;}
+		
+		/* LINKS */
+		a:link {color:#aaa; text-decoration:none;}
+		a:visited {color:#aaa;}
+		a:hover {color:aqua;}
+		a:focus {color:aqua;}
+		a:active {color:aqua;}
+		
+		section a:link {color:#666;}
+		section a:visited {color:#666;}
+		section a:hover {color:red;}
+		section a:focus {color:red;}
+		section a:active {color:red;}
+		
+		nav a:link, nav a:visited {color:white; background-color:red; padding:6px;}
+		nav a:hover, nav a:focus, nav a:active {color:white; background-color:#777;}
+
     </style>
 </head>
 
