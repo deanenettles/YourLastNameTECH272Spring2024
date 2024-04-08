@@ -13,20 +13,24 @@
 		
 		/* STRUCTURE */
 		figure {margin:0;}
-		section {padding:20px; background0-color:orange;}
+		section {padding:20px; background-color:orange;}
 		
 		/* FLOATS */
 		.fr300 {width:100%; max-width:300px; float:right; margin-left:20px; margin-bottom:20px;}
 		
 		.fr200 {width:100%; max-width:200px; float:right; margin-left:20px; margin-bottom:20px;}
 		
-		
+		.clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+		}
 		
 	</style>
 </head>
 
 <body>
-	<section>
+	<section class="clearfix">
       <h2>Biography</h2>
 
       <figure class="fr200">
@@ -37,6 +41,7 @@
       </figure>
 
       <p>Walter Gropius, like his father and his great-uncle Martin Gropius before him, studied to became an architect. Gropius could not draw, and was dependent on collaborators and partner-interpreters throughout his career. In school he hired an assistant to complete his homework for him. In <time datetime="1908">1908</time>, after studying architecture in Munich and Berlin for four semesters, Gropius joined the office of the renowned architect and industrial designer Peter Behrens, one of the first members of the utilitarian school. His fellow employees at this time included Ludwig Mies van der Rohe and Le Corbusier.</p>
+
 	</section>
 
     <h3>Early Career</h3>
