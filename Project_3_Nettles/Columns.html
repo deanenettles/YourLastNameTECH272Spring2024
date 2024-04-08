@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-US"> 
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Columns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Here's how to use floats and ">
+	
+	<link rel="stylesheet" href="../Project_2_Nettles/css/normalize.css">
+	
+    <style>
+		* {outline:1px solid pink;}
+		
+      /* STRUCTURE */
+        /* box-sizing */
+		html {
+			box-sizing:border-box;
+		}
+		*, *:before, *:after {
+			box-sizing:inherit;
+		}
+
+      /* Apply the following class to any container containing a floated item */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+		main {outline:1px solid blue;}
+		
+		/* container for FLOATS*/
+		article {color:white; 	padding:20px; width:40%;
+		outline:1px solid blue; text-align:center;}
+		section.floated article {float:left; background-color:red;}
+		section.floated article:nth-child(even) {margin:0px 2.5% 20px 7.5%;}
+		section.floated article:nth-child(odd) {margin:0px 7.5% 20px 2.5%;}
+        section.floated article:last-child {float:none; clear:both; margin:20px auto;}
+		
+		/* Container for FLEXBOX */
+		.flex-container {display:flex; justify-content: center; flex-wrap: wrap;}
+        .flex-container > article {
+			background-color:blue; outline:1px solid red; width:40%; margin:10px 2.5%;
+		}
+
+		
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Floats &amp; Clears and CSS Flexbox</h1>
+		<section class="clearfix  floated">
+			<h2>Floats and Clears</h2>
+			<article class="one">
+              <h3>One</h3>
+			</article>
+			<article class="two">         <h3>Two</h3>
+			</article>		
+			<article class="two">         <h3>Two</h3>
+			</article>		
+		</section>
+		
+		<section>
+			<h2>CSS Flexbox</h2>
+			<div class="flex-container">
+			<article class="one">
+              <h3>One</h3>
+			</article>
+			<article class="two">         <h3>Two</h3>
+			</article>	
+			<article class="two">         <h3>Two</h3>
+			</article>	
+				</div>
+		</section>	
+	</main>
+</body>
+</html>
