@@ -1,14 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<title>Nettles Tables and Forms</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Practice with tables and forms">
-	
+
 	<link rel="stylesheet" href="../../Project_2_Nettles/css/normalize.css">
-	
 	<style>
+
 		* {font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; box-sizing:border-box;}
 		
 		/*STRUCTURE */
@@ -19,10 +19,10 @@
 		table {width:100%;}
 		
 		/* TABLE */
-		table {text-align:left;}
-		th, td {padding:6px; width:20%;}
+		table {text-align:left; border-collapse: collapse;}
+		th, td {padding:6px; }
 		th {width:10%; background-color:#ddd;}
-		tbody th {background-color:beige;}
+		tbody th {background-color:beige; width:5%;}
 		td {width:22.5%;}
 		tfoot td {color:white; background-color: black;}
 		td {text-align:left}
@@ -37,7 +37,7 @@
 		input[type=text], input[type=email], select, textarea 
 		{width:375px;}
 		
-		button, input[type=reset] {width:100px;}
+		button {width:100px;}
 		
 		/* FORM BUTTONS */
 		button {margin-top: 20px; background-color:red; color:white; font-weight: 700; border:0 solid black;}
@@ -47,15 +47,14 @@
 		button:active {
 			background-color:aqua; color:black;
 		}
-		
-		input[type=reset] {background-color:darkkhaki; font-weight:700; border:0 solid black;}
+	
+		button[type=reset] {background-color:darkkhaki; font-weight:700; border:0 solid black;}
 
-		input[type=reset]:hover,
-		input[type=reset]:focus, input[type=reset]:active {
+		button[type=reset]:hover,
+		button[type=reset]:focus, button[type=reset]:active {
 			background-color: azure;
 		}
-		
-		
+	
 	</style>
 </head>
 
@@ -65,40 +64,40 @@
 			<h1>Tables and Forms</h1>
 			<section id="table">
 				<h2>Tables</h2>
-				<table cellpadding="0" cellspacing="0">
+				<table>
 					<thead>
 						<tr>
-							<th>&nbsp;</th>
-							<th>Age</th>
-							<th>First Name</th>
-							<th>Last Name</th>
-							<th>Grade Point</th>
+							<th scope="col">Number</th>
+							<th scope="col">Age</th>
+							<th scope="col">First Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">Grade Point</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th>#1</th>
+							<th scope="row">#1</th>
 							<td>32</td>
 							<td>John</td>
 							<td>Glenn</td>
 							<td>3.04</td>
 						</tr>
 						<tr>
-							<th>#2</th>
+							<th scope="row">#2</th>
 							<td>28</td>
 							<td>Guss</td>
 							<td>Grissom</td>
 							<td>3.28</td>
 						</tr>
 						<tr>
-							<th>#3</th>
+							<th scope="row">#3</th>
 							<td>36</td>
 							<td>Sally</td>
 							<td>Ride</td>
 							<td class="special">4.00</td>
 						</tr>
 						<tr>
-							<th>#4</th>
+							<th scope="row">#4</th>
 							<td>35</td>
 							<td>William</td>
 							<td>Shepard</td>
@@ -111,7 +110,7 @@
 						</tr>
 					</tfoot>
 				</table>
-				
+
 			</section>
 			<section id="form">
 				<h2>Forms</h2>
@@ -137,9 +136,9 @@
 					<!-- cols = how many characters are displayed on a line -->
 					<!-- Rows = how many rows of info are displayed -->
 					<!-- SEND AND RESET -->
-					<button type="send" value="Send">Send</button>
-					<input type="reset" value="Reset">
-					
+					<button type="submit" value="send">Send</button>
+					<button type="reset" value="reset">Reset</button>
+
 				</form>
 			</section>
 		</main>
